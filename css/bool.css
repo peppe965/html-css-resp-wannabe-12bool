@@ -1,6 +1,6 @@
 /* debug */
 .debug .container{
-  height: 200px;
+  /* height: 200px; */
   background-color: pink;
 }
 
@@ -47,6 +47,14 @@
    /* large screen destop */
 @media screen and (min-width:992px){
 
+  [class*="col-"] img{
+    height: 200px;
+  }
+
+  .d-none-lg{
+    display: none;
+  }
+
   .col-lg-1{
     width: calc(( 100% / 12 ) * 1)
   }
@@ -84,14 +92,6 @@
   .col-lg-12{
     width: calc(( 100% / 12 ) * 12)
   }
-
-  .d-none-lg{
-    display: none;
-  }
-}
-
-/* offset */
-@media screen and (min-width:992px){
 
   .offset-lg-1{
     margin-left: calc(( 100% / 12 ) * 1)
@@ -132,6 +132,12 @@
 
   /* tablet */
 @media screen and (min-width:769px) and (max-width:992px){
+
+  [class*="col-"] img{
+    height: 150px;
+  }
+
+
   .col-md-1{
     width: calc(( 100% / 12 ) * 1)
   }
@@ -209,6 +215,19 @@
 }
   /* smartphone */
 @media screen and (max-width:768px){
+
+  [class*="col-"] img{
+    height: 100px;
+  }
+
+  #lezioni > div > p{
+    margin: auto;
+    max-width: 60%;
+  }
+
+  #lezioni img, #lezioni h3{
+    margin: 20px 0;
+  }
   .col-xs-1{
     width: calc(( 100% / 12 ) * 1)
   }
@@ -246,9 +265,6 @@
   .col-xs-12{
     width: calc(( 100% / 12 ) * 12)
   }
-}
-
-@media screen and (max-width:768px){
 
   /* offset */
   .offset-xs-1{
