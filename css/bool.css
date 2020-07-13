@@ -1,22 +1,4 @@
-/* debug */
-.debug .container{
-  /* height: 200px; */
-  background-color: pink;
-}
 
-.debug [class*="col-"]{
-  border: 1px solid #000;
-  height: 100%;
-  padding: 10px;
-}
-
-.debug [class*="col-"] > .container{
-  height: 100%;
-}
-.debug [class*="col-"] > .container > [class*="col-"]{
-  background-color: lightcoral;
-  border: 1px solid #fff;
-}
 /* framework */
  * {
   margin: 0;
@@ -25,20 +7,16 @@
   border-box;
 }
 
-.container{
+.row{
   max-width: 1170px;
   margin: auto;
+  text-align: center;
 }
 
-.container::after{
-  content: "";
-  display: table;
-  clear: both;
-}
 
 /* colonne */
 [class*="col-"]{
-  float: left;
+  display: inline-block;
 }
 
 .f-none{
@@ -220,14 +198,20 @@
     height: 100px;
   }
 
-  #lezioni > div > p{
+  div > p{
     margin: auto;
     max-width: 60%;
   }
 
-  #lezioni img, #lezioni h3{
+  img,  h3{
     margin: 20px 0;
   }
+
+  #why hr{
+    width: 80%;
+    margin: 30px auto;
+  }
+
   .col-xs-1{
     width: calc(( 100% / 12 ) * 1)
   }
